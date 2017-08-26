@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Galleries on Mohd Shammout</title>
+    <link>https://linkinmedo.github.io/gallery/</link>
+    <description>Recent content in Galleries on Mohd Shammout</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>true</copyright>
+    <lastBuildDate>Sat, 19 Aug 2017 23:32:09 +0300</lastBuildDate>
+    
+	<atom:link href="https://linkinmedo.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zamanoun Architect</title>
+      <link>https://linkinmedo.github.io/gallery/zamanoun/</link>
+      <pubDate>Sat, 19 Aug 2017 23:32:09 +0300</pubDate>
+      
+      <guid>https://linkinmedo.github.io/gallery/zamanoun/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
