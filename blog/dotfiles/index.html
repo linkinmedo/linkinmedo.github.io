@@ -6,11 +6,11 @@
         <title>
             
             
-                Mohd Shammout
+                The journey to dotfiles ZEN | Mohd Shammout
             
         </title>
 
-        <meta name="title" content="Mohd Shammout">
+        <meta name="title" content="The journey to dotfiles ZEN | Mohd Shammout">
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -28,7 +28,7 @@
         <meta name="twitter:site" content="@linkinmedo">
         <meta name="twitter:creator" content="@linkinmedo">
         
-        <meta property="og:title" content="Mohd Shammout">
+        <meta property="og:title" content="The journey to dotfiles ZEN | Mohd Shammout">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://linkinmedo.github.io">
         <meta property="og:image" content="https://linkinmedo.github.io/images/osprey.png">
@@ -55,8 +55,8 @@
         <meta name="theme-color" content="#FFF">
         
 
-        <link rel="canonical" href="https://linkinmedo.github.io/">
-        <link href="https://linkinmedo.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Mohd Shammout">
+        <link rel="canonical" href="https://linkinmedo.github.io/blog/dotfiles/">
+        
         <link rel="stylesheet" href="https://linkinmedo.github.io/styles/main.css" type="text/css">
         
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/github.min.css">
@@ -66,17 +66,6 @@
     <body>
         
 
-        
-        <header class="row middle-xs center-xs">
-            <div class="col-xs-12">
-                <div class="row middle-xs center-xs">
-                    <div class="col-xs-12"><img src="https://linkinmedo.github.io/images/osprey-logo.png" alt="Mohd Shammout"></div>
-                </div>
-                <div class="row middle-xs center-xs">
-                    <div class="col-xs-12"><h1>Full Stack Developer<span class="cursor">|</span></h1></div>
-                </div>
-            </div>
-        </header>
         
 
         <nav class="row middle-xs center-xs">
@@ -114,68 +103,97 @@
         <main>
 
 
+    <section class="container">
+        <section class="content">
+            <h1> The journey to dotfiles ZEN </h1>
 
+            <div class="sub-header">
+                August 2017 · 2 minute read
+            </div>
 
+            <div class="entry-content">
+                
 
-<section class="gallery" id="work">
-    <div class="row">
+<h2 id="the-problem-with-dotfiles">The problem with dotfiles</h2>
 
-        
-        
+<p>As a new developer you will learn that using the cli will mean that you have to deal with what&rsquo;s called dotfiles which are usually used as configuration files.</p>
 
-        
-        
+<p>The name dotfiles come from the fact that these files names start with a dot eg: .zshrc which makes them hidden by default in file explorers.</p>
 
-        
-        
+<p>It&rsquo;s simple enough at first but problems starts to rise when you are forced to use multiple devices and want to keep your dotfiles synced between them.</p>
+
+<p>This post is here to help you with keeping your dotfiles in sync and reach your dotfiles zen.</p>
+
+<h2 id="the-journey-begins">The journey begins</h2>
+
+<p>It all starts with a git repository with all your dotfiles symlinked to it.</p>
+
+<p>What is symlinking you might ask, welp you can think of it as shortcut of sort to your file and that&rsquo;s the extent of knowledge you need to have to use it.</p>
+
+<p>Now lets make a new directory and cd into it.</p>
+
+<pre><code>$ mkdir dotfiles
+
+$ cd dotfiles
+</code></pre>
+
+<p>Then let&rsquo;s choose the dotfiles we want to symlink, for this blog we are going to use .bash_profile as an example.</p>
+
+<p>It&rsquo;s usually located at your home directory, so to symlink it we use</p>
+
+<pre><code>$ ln -sf ~/.bash_profile ~/.bash_profile
+</code></pre>
+
+<p>This will create .bash_profile file in our directory and link it to the one in the home directory so that both of them will always have the same data.</p>
+
+<p>You should do this to all the files that you want to be easily synced between your devices.</p>
+
+<h2 id="the-linking-automation">The linking automation</h2>
+
+<p>Now that we have all our files linked we want an easy way to link them on other devices, and this is where writing a simple shell script comes into play.</p>
+
+<p>A simple shell script is a .sh file with a sequence of shell commend written in it, yup it&rsquo;s that simple.</p>
+
+<p>So let&rsquo;s make our install.sh script.</p>
+
+<pre><code>$ touch install.sh
+</code></pre>
+
+<p>Now open it with your favorite text editor and write the linking command in it but reversed.</p>
+
+<pre><code>ln -sf ~/dotfiles/.bash_profile ~/.bash_profile
+</code></pre>
+
+<p>You notice that I wrote the full path to our directory in the linking command, this save you a lot of permission headache but also means that you&rsquo;ll have to be careful and clone your repository to the path you&rsquo;ve specified in the install.sh</p>
+
+<h2 id="the-remote-repository">The remote repository</h2>
+
+            </div>
+
+            <div class="pagination">
+                
+                
+            </div>
+        </section>
+        <br>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        (function() {
             
-        
-
-    </div>
+            
+            if (window.location.hostname == "localhost")
+                return;
+            var disqus_shortname = 'tomanistor';
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view comments powered by <a href="http://disqus.com/?ref_noscript">Disqus</a>.</noscript>
 </section>
 
-<section class="blog" id="blog">
-    <div class="container">
-        <div class="row center-xs">
-            <div class="col-xs-12"><h1>Latest Posts</h1></div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 posts-list">
-                
-                    <article>
-                        <h2><a href="https://linkinmedo.github.io/blog/dotfiles/">The journey to dotfiles ZEN</a></h2>
-                        <div class=sub-header>
-                          August 2017 · 2 minute read
-                        </div>
-                    </article>
-                
-            </div>
-        </div>
-        <div class="row center-xs">
-            <div class="col-xs-12"><h3><a href="https://linkinmedo.github.io/blog/">View All</a></h3></div>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="row center-xs">
-            <div class="col-xs-12"><h1>Let's Chat</h1></div>
-        </div>
-        <form id="form-contact" action="https://formspree.io/mohammed.n.shammout@gmail.com" method="POST">
-            <div class="row center-xs">
-                <div class="col-xs-12 col-sm-6"><input type="text" name="name" placeholder="Name" required></div>
-                <div class="col-xs-12 col-sm-6"><input type="email" name="email" placeholder="Email" required></div>
-                <div class="col-xs-12"><input type="text" name="_subject" placeholder="Subject" required></div>
-                <div class="col-xs-12"><textarea name="message" placeholder="Message" required></textarea></div>
-                <input type="text" name="_gotcha" style="display:none">
-                <input type="hidden" name="_next" value="/">
-                <div class="col-xs-6" id="form-submit"><input type="submit" value="Send"></div>
-                <div class="col-xs-12" id="form-thankyou" style="display:none;">Thanks for your email!</div>
-            </div>
-        </form>
-    </div>
-</section>
+    </section>
 
         </main>
         <footer class="row middle-xs center-xs">
@@ -201,49 +219,7 @@
             
             <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
             
-            <script src="https://linkinmedo.github.io/scripts/index.js" type="text/javascript"></script>
-            
-            
-            <script>
-              $("#form-contact").on("submit", function(e) {
-                  e.preventDefault();
-
-                  
-                  var name = $("input[name=name]").val();
-                  var email = $("input[name=email").val();
-                  var subject = $("input[name=_subject").val();
-                  var message = $("textarea[name=message]").val();
-
-                  
-                  $.ajax({
-                      url:"https://formspree.io/mohammed.n.shammout@gmail.com",
-                      method:"POST",
-                      data:{
-                          name:name,
-                          _replyto:email,
-                          email:email,
-                          _subject:subject,
-                          message:message,
-                      },
-                      dataType:"json",
-                      success:function() {
-                          console.log("Form successfully sent");
-                          
-                          $("#form-contact").get(0).reset();
-                          
-                          $("#form-submit").fadeOut(function(){
-                              $("#form-thankyou").fadeIn(function(){
-                                  $("#form-thankyou").delay(4000).fadeOut(function(){
-                                      $("#form-submit").fadeIn();
-                                  });
-                              });
-                          });
-                      }
-                  });
-
-              });
-            </script>
-            
+            <script src="https://linkinmedo.github.io/scripts/main.js" type="text/javascript"></script>
             
             <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
         </footer>

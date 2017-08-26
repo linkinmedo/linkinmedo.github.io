@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://linkinmedo.github.io/blog/dotfiles/</loc>
+    <lastmod>2017-08-19T23:40:57+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://linkinmedo.github.io/blog/</loc>
+    <lastmod>2017-08-19T23:40:57+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://linkinmedo.github.io/</loc>
+    <lastmod>2017-08-19T23:40:57+03:00</lastmod>
     <priority>0</priority>
   </url>
   
